@@ -20,6 +20,15 @@ Infer the repo from `git remote -v`; `gh` does this automatically when run insid
 
 **PRs as a request surface: no.**
 
+## Wayfinding operations
+
+- **Map**: create one issue labelled `wayfinder:map`, with the Destination, Notes, Decisions-so-far, Not yet specified, and Out of scope sections.
+- **Child ticket**: create the issue as a sub-issue of the map. Label it with exactly one Wayfinder type: `wayfinder:research`, `wayfinder:prototype`, `wayfinder:grilling`, or `wayfinder:task`.
+- **Blocking**: use GitHub's native issue dependencies. A child is unblocked when all blockers are closed.
+- **Frontier query**: list open, unassigned child tickets for the map that have no open blockers. The first ticket in map order is the frontier.
+- **Claim**: assign the ticket to `@me` before starting work.
+- **Resolve**: comment with the answer, close the ticket, and add a one-line context pointer to the map's Decisions-so-far.
+
 ## When a skill says "publish to the issue tracker"
 
 Create a GitHub issue.
